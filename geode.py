@@ -19,5 +19,7 @@ if __name__ == '__main__':
     kwargs = {
         'pip': pip_path,
         'download_dir': local_package_dir,
+        'find-links': local_package_dir
     }
-    subprocess.call('%(pip)s install wheel --download-cache %(download_dir)s' % kwargs, shell=True)
+    subprocess.call(('%(pip)s install wheel --download-cache %(download_dir)s '
+        '--find-links %(find-links)s') % kwargs, shell=True)
