@@ -23,3 +23,7 @@ if __name__ == '__main__':
     }
     subprocess.call(('%(pip)s install wheel --download-cache %(download_dir)s '
         '--find-links %(find-links)s') % kwargs, shell=True)
+
+    kwargs['req_file'] = 'requirements.txt'
+    subprocess.call(('%(pip)s install wheel --download-cache %(download_dir)s '
+        '--find-links %(find-links)s --requirement %(req_file)s') % kwargs, shell=True)
