@@ -1,0 +1,6 @@
+nose
+poster
+python-dateutil
+pyparsing
+astroid
+pylint
